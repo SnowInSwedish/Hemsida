@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Automation Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Your existing styles */
 
@@ -26,11 +27,53 @@
             align-items: center;
             margin: 1rem 0;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .feature {
+            animation: slide-in-right 0.5s ease-in-out;
+        }
+
+        @keyframes slide-in-right {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Home Automation Hub</h1>
+        <h1>Home Automation Hub</h1>
         <p>Your Gateway to Smart Living</p>
     </header>
 
@@ -71,6 +114,4 @@
 
     <script>
         /* Your existing script */
-    </script>
-</body>
-</html>
+    </script
