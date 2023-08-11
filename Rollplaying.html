@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeons & Dragons Hub</title>
-    <script src="mouse.js"></script>
     <style>
         /* Your existing styles */
 
@@ -83,7 +82,7 @@
         </div>
     </section>
 
-    <section class="gallery-of-adventures">
+    <section>
         <h2>Gallery of Adventures</h2>
         <div class="image-section">
             <img src="https://i.pinimg.com/564x/1e/4d/cc/1e4dccddff370651e6732b718be9c740.jpg" alt="Adventure Image 1" class="image">
@@ -112,7 +111,7 @@
         </div>
         <div class="image-section">
             <img src="https://i.pinimg.com/564x/f3/00/ff/f300fff59aec1b992be159e79d60a729.jpg" alt="Adventure Image 6" class="image">
-            <p>Alvia -         "See me now, scarred and bloodied, a victor amidst the ruins. The price paid, etched upon my very flesh, a testament to the inferno that raged within and without. May my resilience be a beacon to those who tread the path of sacrifice."
+            <p>Alvia - "See me now, scarred and bloodied, a victor amidst the ruins. The price paid, etched upon my very flesh, a testament to the inferno that raged within and without. May my resilience be a beacon to those who tread the path of sacrifice."
                 
             </p>
         </div>
@@ -127,41 +126,8 @@
         <p>Contact us: adventures@dndhub.com</p>
     </footer>
 
-    
-        /* Your script content here */
     <script>
-        const galleryOfAdventures = document.querySelector(".gallery-of-adventures");
-        const galleryTitle = document.querySelector(".gallery-of-adventures h2");
-
-        const FOLD_SPEED = 500;
-
-        function toggleGallery() {
-            galleryOfAdventures.classList.toggle("folded");
-
-            // Animate the folding of the gallery
-            if (galleryOfAdventures.classList.contains("folded")) {
-                galleryTitle.innerHTML = "Expand Gallery";
-                galleryOfAdventures.style.height = "0";
-                galleryOfAdventures.style.opacity = 0;
-
-                setTimeout(() => {
-                    galleryOfAdventures.style.height = "";
-                    galleryOfAdventures.style.opacity = 1;
-                }, FOLD_SPEED);
-            } else {
-                galleryTitle.innerHTML = "Collapse Gallery";
-                galleryOfAdventures.style.height = galleryOfAdventures.scrollHeight;
-                galleryOfAdventures.style.opacity = 0;
-
-                setTimeout(() => {
-                    galleryOfAdventures.style.height = "";
-                    galleryOfAdventures.style.opacity = 1;
-                }, FOLD_SPEED);
-            }
-        }
-
-        galleryTitle.addEventListener("click", toggleGallery);
+        /* Your script content here */
     </script>
-    
 </body>
 </html>
