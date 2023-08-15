@@ -9,9 +9,14 @@
 
         /* Additions for enhanced interactivity and animations */
         .animated {
-            animation: fadeInUp 1s ease-in-out;
             opacity: 0;
             transform: translateY(20px);
+        }
+
+        .fade-in {
+            animation: fadeInUp 1s ease-in-out;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         @keyframes fadeInUp {
@@ -32,7 +37,7 @@
         <p>Your Safety, Our Priority</p>
     </header>
 
-    <section class="animated">
+    <section class="animated fade-in">
         <h1>Experience Enhanced Security</h1>
         <p>Transform your home into a fortress of safety with our cutting-edge security solutions. Our experts are dedicated to providing tailored security integration to match your unique needs.</p>
         
@@ -76,11 +81,11 @@
     </footer>
 
     <script>
-        // Adding animation class to trigger fade-in effect
+        // Adding and removing the fade-in class for animation
         document.addEventListener("DOMContentLoaded", function() {
             const animatedElements = document.querySelectorAll(".animated");
             animatedElements.forEach(element => {
-                element.classList.add("fadeInUp");
+                element.classList.add("fade-in");
             });
         });
     </script>
