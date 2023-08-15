@@ -3,31 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Home Solutions</title>
+    <title>Security System Integration</title>
     <style>
-        /* Your existing styles here */
-
-        /* Additions for enhanced interactivity and animations */
-        .animated {
-            opacity: 0;
-            transform: translateY(20px);
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
         }
 
-        .fade-in {
-            animation: fadeInUp 1s ease-in-out;
-            opacity: 1;
-            transform: translateY(0);
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #3498db;
         }
 
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem;
+        }
+
+        .section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Feature Styles */
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .feature h2 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #34495e;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
         }
     </style>
 </head>
@@ -37,57 +82,25 @@
         <p>Your Safety, Our Priority</p>
     </header>
 
-    <section class="animated fade-in">
-        <h1>Experience Enhanced Security</h1>
-        <p>Transform your home into a fortress of safety with our cutting-edge security solutions. Our experts are dedicated to providing tailored security integration to match your unique needs.</p>
-        
-        <div class="feature">
-            <div class="feature-icon">📷</div>
-            <div class="feature-content">
-                <h2>Live Surveillance Insights</h2>
-                <p>Gain real-time insights with our intelligent surveillance camera systems that watch over your home day and night.</p>
-            </div>
-        </div>
-        
-        <div class="feature">
-            <div class="feature-icon">🚨</div>
-            <div class="feature-content">
-                <h2>Instant Motion Alerts</h2>
-                <p>Get instant alerts powered by advanced motion detection, ensuring you're always aware of any activity around your property.</p>
-            </div>
-        </div>
+    <section class="section">
+        <h1>Security System Integration</h1>
+        <p>Enhance the safety and security of your home with our state-of-the-art security system integration services. Our team of experts is dedicated to providing comprehensive security solutions that fit your unique needs.</p>
         
         <div class="feature">
             <div class="feature-icon">🔒</div>
             <div class="feature-content">
-                <h2>Smart Access Control</h2>
-                <p>Take control of your space with our secure smart locks, allowing you to manage access with ease and precision.</p>
+                <h2>Smart Surveillance Cameras</h2>
+                <p>Experience real-time monitoring with our cutting-edge surveillance camera systems.</p>
             </div>
         </div>
         
-        <div class="feature">
-            <div class="feature-icon">🕒</div>
-            <div class="feature-content">
-                <h2>Round-the-Clock Protection</h2>
-                <p>Rest easy with our 24/7 professional monitoring, ensuring continuous safeguarding for you and your loved ones.</p>
-            </div>
-        </div>
-
-        <p>Your peace of mind is our mission. Our integrated security systems provide a haven of safety, allowing you to focus on what matters most.</p>
+        <!-- Repeat the same structure for other features -->
+        
+        <p>At Secure Home Solutions, we understand the importance of protecting what matters most to you. Our seamless integration of security systems ensures peace of mind and a safer living environment for you and your loved ones.</p>
     </section>
 
     <footer>
         <p>&copy; 2023 Secure Home Solutions. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Adding and removing the fade-in class for animation
-        document.addEventListener("DOMContentLoaded", function() {
-            const animatedElements = document.querySelectorAll(".animated");
-            animatedElements.forEach(element => {
-                element.classList.add("fade-in");
-            });
-        });
-    </script>
 </body>
 </html>
