@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping List</title>
+</head>
+<body>
+<h1>Shopping List</h1>
+<ul id="shoppingList">
+<li>Milk</li>
+<li>Eggs</li>
+<li>Bread</li>
+</ul>
+<button id="addButton">Add Item</button>
+<button id="removeButton">Remove Item</button>
+<script>
+var shoppingList = document.querySelector("#shoppingList");
+var addButton = document.querySelector("#addButton");
+var removeButton = document.querySelector("#removeButton");
+
+addButton.onclick = function() {
+  var item = prompt("What item would you like to add to the shopping list?");
+  var newItem = document.createElement("li");
+  newItem.textContent = item;
+  shoppingList.appendChild(newItem);
+};
+
+removeButton.onclick = function() {
+  if (shoppingList.children.length > 0) {
+    shoppingList.removeChild(shoppingList.lastChild);
+  }
+};
+</script>
+</body>
+</html>
