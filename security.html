@@ -3,45 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security System Integration</title>
+    <title>Secure Home Solutions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+        /* Your existing styles here */
+
+        /* Additions for enhanced interactivity and animations */
+        .animated {
+            animation: fadeInUp 1s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
-        header {
-            background-color: #2a2a2a;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #2a2a2a;
-        }
-
-        p {
-            color: #555555;
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #2a2a2a;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -51,21 +32,57 @@
         <p>Your Safety, Our Priority</p>
     </header>
 
-    <section>
-        <h1>Security System Integration</h1>
-        <p>Enhance the safety and security of your home with our state-of-the-art security system integration services. Our team of experts is dedicated to providing comprehensive security solutions that fit your unique needs.</p>
-        <p>We offer a range of cutting-edge technologies including:</p>
-        <ul>
-            <li>Smart surveillance cameras with real-time monitoring</li>
-            <li>Advanced motion detection and alerts</li>
-            <li>Secure smart locks and access control</li>
-            <li>24/7 professional monitoring services</li>
-        </ul>
-        <p>At Secure Home Solutions, we understand the importance of protecting what matters most to you. Our seamless integration of security systems ensures peace of mind and a safer living environment for you and your loved ones.</p>
+    <section class="animated">
+        <h1>Experience Enhanced Security</h1>
+        <p>Transform your home into a fortress of safety with our cutting-edge security solutions. Our experts are dedicated to providing tailored security integration to match your unique needs.</p>
+        
+        <div class="feature">
+            <div class="feature-icon">📷</div>
+            <div class="feature-content">
+                <h2>Live Surveillance Insights</h2>
+                <p>Gain real-time insights with our intelligent surveillance camera systems that watch over your home day and night.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">🚨</div>
+            <div class="feature-content">
+                <h2>Instant Motion Alerts</h2>
+                <p>Get instant alerts powered by advanced motion detection, ensuring you're always aware of any activity around your property.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-content">
+                <h2>Smart Access Control</h2>
+                <p>Take control of your space with our secure smart locks, allowing you to manage access with ease and precision.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">🕒</div>
+            <div class="feature-content">
+                <h2>Round-the-Clock Protection</h2>
+                <p>Rest easy with our 24/7 professional monitoring, ensuring continuous safeguarding for you and your loved ones.</p>
+            </div>
+        </div>
+
+        <p>Your peace of mind is our mission. Our integrated security systems provide a haven of safety, allowing you to focus on what matters most.</p>
     </section>
 
     <footer>
         <p>&copy; 2023 Secure Home Solutions. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Adding animation class to trigger fade-in effect
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedElements = document.querySelectorAll(".animated");
+            animatedElements.forEach(element => {
+                element.classList.add("fadeInUp");
+            });
+        });
+    </script>
 </body>
 </html>
