@@ -1,17 +1,31 @@
 <?php
-$shoppingListFile = 'shopping_list.txt';
+$host = 'localhost';
+$dbname = 'shoppinglist';
+$username = 'root';
+$password = 'rootpassword';
+
+try {
+    $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+    die();
+}
 
 function loadShoppingList() {
-    global $shoppingListFile;
-    if (file_exists($shoppingListFile)) {
-        return file($shoppingListFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    }
-    return array();
+    global $db;
+    $stmt = $db->prepare("SELECT name FROM items");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_COLUMN);
 }
 
 function saveShoppingList($list) {
-    global $shoppingListFile;
-    file_put_contents($shoppingListFile, implode(PHP_EOL, $list));
+    global $db;
+    $db->exec("DELETE FROM items");
+    foreach ($list as $item) {
+        $stmt = $db->prepare("INSERT INTO items (name) VALUES (?)");
+        $stmt->execute([$item]);
+    }
 }
 
 $shoppingList = loadShoppingList();
