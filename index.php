@@ -96,14 +96,6 @@
         <p>Your Gateway to Smart Living</p>
     </header>
 
-    <form method="POST" action="">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-        <button type="submit">Login</button>
-    </form>
-
     <section class="highlight">
         <h2>Transform Your Home with Smart Technology</h2>
         <p>Experience convenience, energy efficiency, and security like never before with our cutting-edge home automation solutions.</p>
@@ -128,6 +120,14 @@
             <p>Bring your Roleplaying experience to a new level with your characters</p>
         </div>
     </section>
+
+    <form method="POST" action="">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
 
     <section>
         <h2>Our Services</h2>
