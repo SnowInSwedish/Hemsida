@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Your existing styles */
-
         /* New styles for home automation content */
         .highlight {
             background-color: #009688;
@@ -72,10 +71,38 @@
     </style>
 </head>
 <body>
+    <?php
+    $mongoClient = new MongoDB\Client("mongodb://mongo_db:27017");
+    $database = $mongoClient->selectDatabase("your_database_name");
+    $collection = $database->selectCollection("your_collection_name");
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+    
+        $user = $collection->findOne(["username" => $username, "password" => $password]);
+    
+        if ($user) {
+            // Valid user credentials, perform actions or show content
+            echo "Welcome, " . $user["username"];
+        } else {
+            echo "Invalid credentials. Please try again.";
+        }
+    }
+    ?>
+    
     <header>
         <h1>Home Automation Hub</h1>
         <p>Your Gateway to Smart Living</p>
     </header>
+
+    <form method="POST" action="">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
 
     <section class="highlight">
         <h2>Transform Your Home with Smart Technology</h2>
@@ -98,7 +125,7 @@
         </div>
         <div class="feature">
             <span class="feature-icon">🎲</span>
-            <p>Bring your Rollplaying experience to a new level and your characters</p>
+            <p>Bring your Roleplaying experience to a new level with your characters</p>
         </div>
     </section>
 
@@ -109,8 +136,7 @@
             <li><a href="security.html">Security System Integration</a></li>
             <li><a href="energy.html">Energy Management Solutions</a></li>
             <li><a href="Inventory.html">Inventory Management</a></li>
-            <li><a href="Rollplaying.php">Dungeons and Dragons Hub</li>
-
+            <li><a href="Rollplaying.php">Dungeons and Dragons Hub</a></li>
         </ul>
     </section>
 
@@ -120,5 +146,6 @@
 
     <script>
         /* Your existing script */
-    </script
+    </script>
 </body>
+</html>
