@@ -71,25 +71,7 @@
     </style>
 </head>
 <body>
-    <?php
-    $mongoClient = new MongoDB\Client("mongodb://mongo_db:27017");
-    $database = $mongoClient->selectDatabase("your_database_name");
-    $collection = $database->selectCollection("your_collection_name");
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-    
-        $user = $collection->findOne(["username" => $username, "password" => $password]);
-    
-        if ($user) {
-            // Valid user credentials, perform actions or show content
-            echo "Welcome, " . $user["username"];
-        } else {
-            echo "Invalid credentials. Please try again.";
-        }
-    }
-    ?>
     
     <header>
         <h1>Home Automation Hub</h1>
